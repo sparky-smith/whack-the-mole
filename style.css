@@ -1,0 +1,115 @@
+:root {
+  --primary-color: #b8dfd8;
+  --secondary-color: #71efa3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.game-name {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.game-display {
+  position: relative;
+  background: url(./images/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.score-text {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  font-size: 2rem;
+  color: #000000;
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+.time-text {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  font-size: 2rem;
+  color: #000000;
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+}
+.bush {
+  width: 200px;
+  height: 20vh;
+  display: grid;
+  align-items: flex-end;
+}
+.bush .img-wrapper {
+  position: relative;
+  height: 10vh;
+}
+.bush img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.mole {
+  background: url(/images/mole.png) center/contain no-repeat;
+}
+/* .hammer {
+  background: url(./images/hammer.png) center/contain no-repeat;
+} */
+@media screen and (min-width: 992px) {
+  .game-display {
+    height: 600px;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 10rem;
+  width: 40%;
+  height: 50%;
+  border: solid 30px #efb871;
+  background-color: #71efa3;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  visibility: hidden;
+}
+.new-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+}
